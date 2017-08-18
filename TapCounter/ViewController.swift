@@ -10,16 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    // MARK: - Interactions
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func tapCounter(_ sender: UIButton) {
+        print("tap")
     }
-
-
+    
+    @IBAction func tapResetButton(_ sender: UIBarButtonItem) {
+        print("reset")
+    }
 }
 
