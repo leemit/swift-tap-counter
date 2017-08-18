@@ -24,6 +24,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Clean navigation bar
+        let navigationBar = self.navigationController?.navigationBar
+        navigationBar?.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationBar?.shadowImage = UIImage()
     }
     
     
