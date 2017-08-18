@@ -9,20 +9,34 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    // MARK: - Properties
+    
+    var count = 0
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var countLabel: UILabel!
+    
 
     // MARK: - View Did Load
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    
     // MARK: - Interactions
 
     @IBAction func tapCounter(_ sender: UIButton) {
-        print("tap")
+        count += 1
+        countLabel.text = String(count)
     }
     
     @IBAction func tapResetButton(_ sender: UIBarButtonItem) {
-        print("reset")
+        count = 0
+        countLabel.text = "0"
     }
 }
 
